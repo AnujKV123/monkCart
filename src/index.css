@@ -1,0 +1,27 @@
+.App-Container {
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    
+  }
+
+  /* style varient */
+  .container-main-varient{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  container-toggle-header-varient {
+    width: 100%;
+  }
+  .toggle-header-varient{
+    float: right;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: rgb(89, 158, 255);
+    text-decoration: underline;
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
