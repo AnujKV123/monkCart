@@ -72,6 +72,7 @@ export const ProductItem: React.FC<ProductItemProps> = ({
       </div>
       {showModal && (
         <ProductModal
+          index={index}
           setShowModal={setShowModal}
           itemId={item.id}
           setItems={setItems}

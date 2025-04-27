@@ -7,6 +7,7 @@ import { Loader } from "./Loader";
 const PAGE_SIZE = 10;
 
 const ProductModal: React.FC<ProductModalProps> = ({
+  index,
   setShowModal,
   itemId,
   setItems,
@@ -152,7 +153,11 @@ const ProductModal: React.FC<ProductModalProps> = ({
     setItems((prev) => {
       const updatedProducts = prev.filter((p) => p.id !== itemId);
 
-      return [...updatedProducts, ...selectedItems];
+      return [
+        ...updatedProducts.slice(0, index),
+        ...selectedItems,
+        ...updatedProducts.slice(index),
+      ];
     });
     setLoaderStatus(false);
     document.body.classList.remove("body-scrall-lock");
