@@ -42,7 +42,7 @@ export const ProductItem: React.FC<ProductItemProps> = ({
         <span className="item-index">{index + 1}.</span>
         <div className="continer-product-detail">
           <div className="product-item-title">{item.title.length > 30 ? item.title.substring(0, 20) + "..." : item.title}</div>
-          <button onClick={() => setShowModal(true)}><img className="img-edit-icon" src={EditIcon} alt="Edit Icon" /></button>
+          <button onClick={() => {document.body.classList.add("body-scrall-lock"); setShowModal(true)}}><img className="img-edit-icon" src={EditIcon} alt="Edit Icon" /></button>
         </div>
         {item.disccount ? (
           <div className="offer-container">

@@ -6,6 +6,11 @@
     
   }
 
+  .body-scrall-lock{
+    overflow: hidden;
+    height: 100%;
+  }
+
   /* style varient */
   .container-main-varient{
     display: flex;

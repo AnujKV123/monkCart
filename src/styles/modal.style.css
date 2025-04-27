@@ -43,6 +43,7 @@
     max-height: 460px;
     overflow-y: scroll;
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
   
   .product-selector-title {
@@ -168,6 +169,7 @@
     width: 30%;
     display: flex;
     justify-content: space-between;
+    padding-right: 5px;
   }
   
   .variant-title {
