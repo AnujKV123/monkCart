@@ -15,10 +15,9 @@
   .container-main-varient{
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
   }
-  container-toggle-header-varient {
-    width: 100%;
+  .container-toggle-header-varient {
+    width: 95%;
   }
   .toggle-header-varient{
     float: right;

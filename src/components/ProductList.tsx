@@ -85,7 +85,7 @@ export const ProductList: React.FC = () => {
                 )}
               </div>
               <div>
-                {item.variants.length > 1 && (
+                {item.variants.length > 0 && (
                   <VarientList item={item} setItems={setItems} />
                 )}
               </div>

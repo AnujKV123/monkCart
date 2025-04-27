@@ -21,6 +21,7 @@
 
   .main-container-draggable {
     display: flex;
+    width: 90%;
   }
 
 
@@ -65,6 +66,7 @@
     background-color: white;
     cursor: pointer;
     float: right;
+    margin-right: 25px;
   }
   
   .offer-container {
