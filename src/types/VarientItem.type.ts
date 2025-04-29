@@ -1,11 +1,9 @@
 
-import { Variant } from "./ProductList.type";
+import { Variant, Product } from "./ProductList.type";
 
 export interface VariantItemProps {
     index: number;
     varient: Variant;
-    offer: {
-        value: number;
-        type: "flat" | "off";
-    };
+    productId: number;
+    setItems: React.Dispatch<React.SetStateAction<Product[]>>
 }

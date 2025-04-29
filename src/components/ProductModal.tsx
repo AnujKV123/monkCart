@@ -131,6 +131,11 @@ const ProductModal: React.FC<ProductModalProps> = ({
         const selectedVariants = product.variants.filter((v) =>
           selected.has(v.id)
         );
+
+        selectedVariants.forEach((v) => {
+          v.offer = { value: 0, type: "flat"}
+        })
+
         if (selectedVariants.length > 0) {
           return {
             ...product,
@@ -160,7 +165,7 @@ const ProductModal: React.FC<ProductModalProps> = ({
       ];
     });
     setLoaderStatus(false);
-    document.body.classList.remove("body-scrall-lock");
+    document.body.classList.remove("body-scroll-lock");
     setShowModal(false);
   };
 
@@ -171,7 +176,7 @@ const ProductModal: React.FC<ProductModalProps> = ({
           <button
             className="modal-close"
             onClick={() => {
-              document.body.classList.remove("body-scrall-lock");
+              document.body.classList.remove("body-scroll-lock");
               setShowModal(false);
             }}
           >
@@ -254,7 +259,7 @@ const ProductModal: React.FC<ProductModalProps> = ({
               <button
                 className="modal-btn-cancel"
                 onClick={() => {
-                  document.body.classList.remove("body-scrall-lock");
+                  document.body.classList.remove("body-scroll-lock");
                   setShowModal(false);
                 }}
               >

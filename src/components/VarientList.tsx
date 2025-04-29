@@ -68,7 +68,7 @@ export const VarientList: React.FC<VarientListProps> = ({item, setItems})=>{
                 <span  className="dragger">
                 <img className="img-product-picker" src={ProductPickerIcon} alt="Product Picker" />
                 </span>
-                <VarientItem index={index} varient={varient} offer={item.offer} />
+                <VarientItem index={index} varient={varient} productId={item.id} setItems={setItems} />
                 {item.variants.length > 1 &&
                 <button className="delete-product" onClick={() => handleDelete(varient.id)}>
                     X

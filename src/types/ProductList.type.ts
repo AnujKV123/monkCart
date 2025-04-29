@@ -7,6 +7,10 @@ export interface Variant {
     title: string;
     price: string;
     quantity?: number;
+    offer?: {
+      value?: number;
+      type?: "flat" | "off";
+    };
   }
 
   export interface Image{
