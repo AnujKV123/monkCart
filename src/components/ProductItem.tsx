@@ -21,8 +21,22 @@ export const ProductItem: React.FC<ProductItemProps> = ({
   const handleValueChange = (value: string, id: number) => {
     const numericValue = parseFloat(value);
     setItems((prev) =>
-      prev.map((d) =>
-        d.id === id ? { ...d, offer: { ...d.offer, value: numericValue } } : d
+      prev.map((product) =>
+        {
+          if(product.id !== id) return product;
+
+          return {
+            ...product,
+            offer: { ...product.offer, value: numericValue },
+            variants: product.variants.map((variant) => ({
+              ...variant,
+              offer: {
+                ...variant.offer,
+                value: numericValue,
+              },
+            })),
+          };
+        }
       )
     );
   };
@@ -30,8 +44,22 @@ export const ProductItem: React.FC<ProductItemProps> = ({
   const handleTypeChange = (value: string, id: number) => {
     const offerType = value as "flat" | "off";
     setItems((prev) =>
-      prev.map((d) =>
-        d.id === id ? { ...d, offer: { ...d.offer, type: offerType } } : d
+      prev.map((product) =>
+        {
+          if(product.id !== id) return product;
+
+          return {
+            ...product,
+            offer: { ...product.offer, type: offerType },
+            variants: product.variants.map((variant) => ({
+              ...variant,
+              offer: {
+                ...variant.offer,
+                type: offerType,
+              },
+            })),
+          };
+        }
       )
     );
   };

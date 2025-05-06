@@ -99,3 +99,11 @@
     line-height: 21px;
     letter-spacing: 0px;
   }
+
+  .dragger {
+    cursor: grab;
+  }
+  
+  .main-container-draggable:active .dragger {
+    cursor: grabbing;
+  }
